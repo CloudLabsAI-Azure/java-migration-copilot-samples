@@ -1,13 +1,14 @@
 [ {
   "Name": "Java Migration Copilot Workshop",
   "Language": "English",
+  "BaseURL": "https://github.com/CloudLabsAI-Azure/java-migration-copilot-samples/tree/prod",
   "Files": [
     {
-      "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Defender-for-Cloud/main/modules/mfa.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/java-migration-copilot-samples/refs/heads/prod/Labs/getting-started-with-lab-v2.md",
       "Order": 1
     },    
     {
-      "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Defender-for-Cloud/main/modules/module0-preparing-the-environment.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/java-migration-copilot-samples/refs/heads/prod/Labs/java-migration-copilot.md",
       "Order": 2
     }
     
