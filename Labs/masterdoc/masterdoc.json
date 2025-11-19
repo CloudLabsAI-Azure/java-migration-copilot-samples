@@ -1,0 +1,15 @@
+[ {
+  "Name": "Java Migration Copilot Workshop",
+  "Language": "English",
+  "Files": [
+    {
+      "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Defender-for-Cloud/main/modules/mfa.md",
+      "Order": 1
+    },    
+    {
+      "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabsAI-Azure/Defender-for-Cloud/main/modules/module0-preparing-the-environment.md",
+      "Order": 2
+    }
+    
+  ]
+} ]
