@@ -30,14 +30,12 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 ![Manage Your Virtual Machine](images/gettingstarted-4.png)
 
- 
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
    ![Launch Azure Portal](images/sc900-image(1).png)
 
- 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -50,13 +48,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
       ![Enter Your Password](images/pass1.png)
  
-4. If prompted to stay signed in, you can click "No."
+1. If prompted to stay signed in, you can click "No."
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Cancel" to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Cancel" to skip the tour.
+
+1. Click "Next" from the bottom right corner to embark on your Lab journey!
  
-8. Click "Next" from the bottom right corner to embark on your Lab journey!
- 
-   ![Start Your Azure Journey](images/sc900-image(3).png)
+   ![](images/sc900-image(3).png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way.
 
