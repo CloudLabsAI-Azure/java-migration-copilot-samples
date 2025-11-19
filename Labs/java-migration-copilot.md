@@ -8,44 +8,73 @@ In this lab, you will use the **GitHub Copilot app modernization** extension to 
 ## Lab Objectives
 
 You will be able to complete the following tasks:
-- Task 1: Install GitHub Copilot app modernization
-- Task 2: Assess Your Java Application
-- Task 3: Upgrade Runtime and Frameworks
-- Task 4: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
-- Task 5: Migrate to Azure Blob Storage using Predefined Tasks
-- Task 6: Migrate to Azure Service Bus using Predefined Tasks
-- Task 7: Expose health endpoints using Custom Tasks
-- Task 8: Containerize Applications
-- Task 9: Deploy to Azure
+- Task 1: Assess Your Java Application
+- Task 2: Upgrade Runtime and Frameworks
+- Task 3: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
+- Task 4: Migrate to Azure Blob Storage using Predefined Tasks
+- Task 5: Migrate to Azure Service Bus using Predefined Tasks
+- Task 6: Expose health endpoints using Custom Tasks
+- Task 7: Containerize Applications
+- Task 8: Deploy to Azure
 
-### Task 1: Install GitHub Copilot app modernization
-
-In VSCode, open the Extensions view from the Activity Bar, search for the `GitHub Copilot app modernization` extension in the marketplace. Click the Install button for the extension. After installation completes, you should see a notification in the bottom-right corner of VSCode confirming success.
-
-**Alternative: IntelliJ IDEA**
-Alternatively, you can use IntelliJ IDEA. Open **File** > **Settings** (or **IntelliJ IDEA** > **Preferences** on macOS), navigate to **Plugins** > **Marketplace**, search for `GitHub Copilot app modernization`, and click **Install**. Restart IntelliJ IDEA if prompted.
-
-### Task 2: Assess Your Java Application
+### Task 1: Assess Your Java Application
 
 The first step is to assess the sample Java application `asset-manager`. The assessment provides insights into the application's readiness for migration to Azure.
 
-1. Open VS Code with all the prerequisites installed for the asset manager by changing the directory to the `asset-manager` directory and running `code .` in that directory.
-1. Open the `GitHub Copilot app modernization` extension.
-1. In the **QUICKSTART** view, click the **Migrate to Azure** button to trigger app assessment.
+1. Double-click on the **Visual Studio Code** shortcut on the desktop of your virtual environment.
 
-   ![Trigger Assessment](images//trigger-assessment.png)
+   ![](images/5.png)
 
-1. Wait for the assessment to be completed and the report to be generated.
+1. Click on **Explorer (1)** and select **Open Folder (2)** from the options.
+
+   ![](images/7.png)
+
+1. From File Explorer, navigate to **C:\LabFiles\java-migration-copilot-samples (1)**, select the **asset-manager (2)** folder from the Quick Access section, and click on **Select Folder (3)**.
+
+   ![](images/4.png)
+
+  > **Note:** If a pop-up comes for **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
+
+   ![](images/8.png)
+ 
+1. Open the **GitHub Copilot app modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Migrate to Azure (2)** button to start the app assessment.
+
+   ![Trigger Assessment](images/trigger-assessment.png)
+
+1. In the GitHub Copilot App Modernization lab, when the GitHub sign-in pop-up appears, click on **Allow**.
+
+   ![](images/1.png)
+
+1. On the **Sign in to GitHub** tab, you will see the login screen. In that screen, enter the following **email: odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs**. Then click on **Sign in with your identity provider** **(2)**. 
+   
+   ![](images/githublogin.png)
+          
+1. Next, On the **Single sign-on to CLoudLabs Organizations** select **Continue**.
+
+   ![](images/continue.png)
+
+1. On the **Pick an account** page, select **odl_User<inject key="DeploymentID" enableCopy="false"/>**.
+   
+    ![](images/githubpage.png)
+
+1. On the “Select user to authorize Visual Studio Code” page, click on **Authorize Visual-Studio-Code**.
+
+   ![](images/3.png)
+
+1. Navigate back to Visual Studio Code and wait for the assessment to complete and the report to be generated.
+
+   ![](images/6.png)
+
 1. Review the **Assessment Report**. Select the **Issues** tab to view the proposed solutions for the issues identified in the report.
 
-### Task 3: Upgrade Runtime and Frameworks
+### Task 2: Upgrade Runtime and Frameworks
 
 1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
 
     ![Java Upgrade](images//java-upgrade.png)
 1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
 
-### Task 4: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
+### Task 3: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
 
 Then you can migrate the sample Java application `asset-manager` to Azure.
 
@@ -61,17 +90,17 @@ Then you can migrate the sample Java application `asset-manager` to Azure.
 1. When the code is migrated, the extension will prepare the **CVE Validation and Fixing** process. Click **Allow** to proceed.
 1. Review the proposed code changes and click **Keep** to apply them.
 
-### Task 5: Migrate to Azure Blob Storage using Predefined Tasks
+### Task 4: Migrate to Azure Blob Storage using Predefined Tasks
 
 1. Click the **Run Task** in the Assessment Report, on the right of the row `Storage Migration (AWS S3)` - `Migrate from AWS S3 to Azure Blob Storage`.
 1. The following steps are the same as the above PostgreSQL server migration.
 
-### Task 6: Migrate to Azure Service Bus using Predefined Tasks
+### Task 5: Migrate to Azure Service Bus using Predefined Tasks
 
 1. Click the **Run Task** in the Assessment Report, on the right of the row `Messaging Service Migration (Spring AMQP RabbitMQ)` - `Migrate from RabbitMQ(AMQP) to Azure Service Bus`.
 1. The following steps are the same as the above PostgreSQL server migration.
 
-### Task 7: Expose health endpoints using Custom Tasks
+### Task 6: Expose health endpoints using Custom Tasks
 
 In this section, you will use custom tasks to expose health endpoints for your applications instead of writing code yourself. The following steps demonstrate how to generate custom tasks based on external web links and proper prompts.
 
@@ -91,7 +120,7 @@ In this section, you will use custom tasks to expose health endpoints for your a
 1. Follow the same steps as the predefined task to review and apply the changes.
 1. Review the proposed code changes and click **Keep** to apply them.
 
-### Task 8: Containerize Applications
+### Task 7: Containerize Applications
 
 Now that you have successfully migrated your Java application to use Azure services, the next step is to prepare it for cloud deployment by containerizing both the web and worker modules. In this section, you will use **Containerization Tasks** to containerize your migrated applications.
 > Note: If you encounter any issues with the previous migration step, you can directly proceed with the containerization step using the [workshop/expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/expected/asset-manager) branch.
@@ -108,7 +137,7 @@ Now that you have successfully migrated your Java application to use Azure servi
     <!-- ![Containerization execution steps](images//containerization-execution-steps.png) -->
 1. Copilot Agent will help generate Dockerfile, build Docker images and fix build errors if there are any. Click **Keep** to apply the generated code.
 
-### Task 9: Deploy to Azure
+### Task 8: Deploy to Azure
 
 At this point, you have successfully migrated the sample Java application `asset-manager` to Azure Database for PostgreSQL (Spring), Azure Blob Storage, and Azure Service Bus, and exposed health endpoints via Spring Boot Actuator. Now, you can start the deployment to Azure.
 > Note: If you encounter any issues with the previous migration step, you can directly proceed with the deployment step using the [workshop/expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/expected/asset-manager) branch.
@@ -134,7 +163,6 @@ At this point, you have successfully migrated the sample Java application `asset
 
 In this lab, you have completed the following:
 
-- Installed GitHub Copilot app modernization
 - Assessed Your Java Application
 - Upgraded Runtime and Frameworks
 - Migrated to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
