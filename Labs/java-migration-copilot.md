@@ -1,4 +1,4 @@
-# Java Migration Copilot 
+# GitHub CoPilot Java App Modernization
 
 ### Estimated Duration: 120 Minutes 
 
