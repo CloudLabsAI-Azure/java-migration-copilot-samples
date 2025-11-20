@@ -21,6 +21,7 @@ You will be able to complete the following tasks:
 
 The first step is to assess the sample Java application `asset-manager`. The assessment provides insights into the application's readiness for migration to Azure.
 
+
 1. Double-click on the **Visual Studio Code** shortcut on the desktop of your virtual environment.
 
    ![](images/5.png)
@@ -33,9 +34,9 @@ The first step is to assess the sample Java application `asset-manager`. The ass
 
    ![](images/4.png)
 
-  > **Note:** If a pop-up comes for **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
+   > **Note:** If a pop-up comes for **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
 
-   ![](images/8.png)
+    ![](images/8.png)
  
 1. Open the **GitHub Copilot app modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Migrate to Azure (2)** button to start the app assessment.
 
@@ -67,12 +68,17 @@ The first step is to assess the sample Java application `asset-manager`. The ass
 
 1. Review the **Assessment Report**. Select the **Issues** tab to view the proposed solutions for the issues identified in the report.
 
+   ![](images/10.png)
+
 ### Task 2: Upgrade Runtime and Frameworks
 
 1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
 
-    ![Java Upgrade](images//java-upgrade.png)
+    ![Java Upgrade](images/java-upgrade.png)
+
 1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
+
+   ![](images/9.png)
 
 ### Task 3: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
 
@@ -145,10 +151,12 @@ At this point, you have successfully migrated the sample Java application `asset
 1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Java** -> **Deployment Tasks** -> **Provision Infrastructure and Deploy to Azure**.
 
     ![Run Deployment task](images//deployment-run-task.png)
+
 1. A predefined prompt will be populated in the Copilot Chat panel with Agent Mode. The default hosting Azure service is Azure Container Apps.To change the hosting service to **Azure Kubernetes Service** (AKS), click on the prompt in the Copilot Chat panel and edit the last sentence of the prompt to **Hosting service: AKS**.
 
     ![Deployment prompt](images//deployment-prompt.png)
-1. Click ****Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
+
+1. Click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
 
 1. View the architecture diagram, resource configurations, and execution steps in the plan. Click **Keep** to save the plan and type in **Execute the plan** to start the deployment.
 
