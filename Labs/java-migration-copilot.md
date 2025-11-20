@@ -21,6 +21,9 @@ You will be able to complete the following tasks:
 
 The first step is to assess the sample Java application `asset-manager`. The assessment provides insights into the application's readiness for migration to Azure.
 
+1. On the **LabVM**, click **Start (1)** at the bottom of the screen, then search **docker Desktop (1)** and select **Docker Desktop (2)** from the menu.
+
+   ![](images/11.png)
 
 1. Double-click on the **Visual Studio Code** shortcut on the desktop of your virtual environment.
 
@@ -121,6 +124,7 @@ In this section, you will use custom tasks to expose health endpoints for your a
 1. Click the **Add References** button to add the Spring Boot Actuator official documentation as references.
 
    ![Health endpoint task](images//health-endpoint-task.png)
+   
 1. In the popped-up quick-pick window, select **External links**. Then paste the following link: `https://docs.spring.io/spring-boot/reference/actuator/endpoints.html`. Click **Save** to create the task.
 1. Click the **Run** button to trigger the custom task.
 1. Follow the same steps as the predefined task to review and apply the changes.
