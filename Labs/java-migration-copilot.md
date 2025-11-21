@@ -19,29 +19,60 @@ You will be able to complete the following tasks:
 
 ### Task 1: Assess Your Java Application
 
-The first step is to assess the sample Java application `asset-manager`. The assessment provides insights into the application's readiness for migration to Azure.
+In this task, you will run and explore the sample Java application and use the GitHub Copilot App Modernization extension to assess the project. The assessment will identify code issues, framework versions, migration blockers, and recommendations to determine the application's readiness for modernization and migration to Azure.
 
-1. On the **LabVM**, click **Start (1)** at the bottom of the screen, then search **docker Desktop (1)** and select **Docker Desktop (2)** from the menu.
+1. On the **LabVM**, click **Start (1)** at the bottom of the screen, search for **Docker Desktop (2)**, and select **Docker Desktop (3)** from the menu.
 
    ![](images/11.png)
 
+2. On the **LabVM**, click **Start** at the bottom of the screen and select **File Explorer** from the menu.
+
    ![](images/24.png)
+
+1. In **File Explorer**, navigate to:
+   **C:\LabFiles\java-migration-copilot-samples\assesrt-manager**
 
    ![](images/25.png)
 
+1. In the File Explorer address bar, replace the path
+   **C:\LabFiles\java-migration-copilot-samples\assesrt-manager**
+   with **cmd**, then press **Enter**.
+
    ![](images/26.png)
 
-   ![](images/28.png)
+1. In the Command Prompt window, type the following command and press **Enter**:
+
+   ```
+   scripts\startapp.cmd
+   ```
+
+   ![](images/27.png)
+
+1. This will **use the local file system instead of S3 to store images** and **launch RabbitMQ and PostgreSQL using Docker**.
+   Copy the **web application URL**, **RabbitMQ Management URL**, along with the **username** and **password**, and note them down.
 
    ![](images/29.png)
 
+   > **Note:** If two Windows prompts appear, minimize them and let them run in the background. **Do NOT interrupt** the process.
+
    ![](images/30.png)
+
+1. In the Edge browser, open a new tab and enter **[http://localhost:8080](http://localhost:8080)**. You will be navigated to the **AWS S3 Asset Manager** web page.
 
    ![](images/31.png)
 
-   ![](images/32.png)
+1. In a new tab, enter **[http://localhost:15672](http://localhost:15672) (1)**.
+   Sign in using the credentials:
+
+   * **Username:** guest (2)
+   * **Password:** guest (3)
+     Then click **Login (4)**.
 
    ![](images/32.png)
+
+1. You will be navigated to the **RabbitMQ Management** web page.
+
+   ![](images/33.png)
 
 1. Double-click on the **Visual Studio Code** shortcut on the desktop of your virtual environment.
 
@@ -93,6 +124,8 @@ The first step is to assess the sample Java application `asset-manager`. The ass
 
 ### Task 2: Upgrade Runtime and Frameworks
 
+In this task, you will use predefined Copilot tasks to automatically upgrade the project’s Java runtime version and frameworks such as Spring/Spring Boot. Copilot will analyze the application, apply necessary version updates, recommend fixes, and commit changes in a new branch.
+
 1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
 
     ![Java Upgrade](images/java-upgrade.png)
@@ -103,10 +136,7 @@ The first step is to assess the sample Java application `asset-manager`. The ass
 
 ### Task 3: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
 
-Then you can migrate the sample Java application `asset-manager` to Azure.
-
-> Note: We've set up a [workshop/java-upgrade](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/java-upgrade/asset-manager) branch where the Java upgrade has already been completed. Feel free to switch to this branch if you'd like to skip ahead and continue with the rest of the workshop.
-
+In this task, you will migrate the application's database layer from the local PostgreSQL instance to Azure Database for PostgreSQL Flexible Server using a predefined migration task. Copilot will generate a migration plan, update configuration files, provision Azure resources, and apply the required code changes.
 
 1. For this workshop, Click the **Run Task (3)** in the Assessment Report, on the right of the row `Data Migration (1)` - `Migrate to Azure Database for PostgreSQL (Spring) (2)`.
 
@@ -130,6 +160,8 @@ Then you can migrate the sample Java application `asset-manager` to Azure.
 
 ### Task 4: Migrate to Azure Blob Storage using Predefined Tasks
 
+In this task, you will replace the application's dependency on AWS S3 with Azure Blob Storage. Using predefined tasks, Copilot will update the storage configuration, generate necessary migration scripts, provision blob storage resources, and apply all required code modifications.
+
 1. Click the **Run Task** in the Assessment Report, on the right of the row `Storage Migration (AWS S3)` - `Migrate from AWS S3 to Azure Blob Storage`.
  
    ![](images/23.png)
@@ -139,6 +171,8 @@ Then you can migrate the sample Java application `asset-manager` to Azure.
 1. The following steps are the same as the above PostgreSQL server migration.
 
 ### Task 5: Migrate to Azure Service Bus using Predefined Tasks
+
+In this task, you will migrate the application's messaging component from RabbitMQ to Azure Service Bus. Copilot will generate a migration plan, update messaging libraries and configurations, provision Service Bus resources, and refactor the project to use Azure-native messaging services.
 
 1. Click the **Run Task** in the Assessment Report, on the right of the row `Messaging Service Migration (Spring AMQP RabbitMQ)` - `Migrate from RabbitMQ(AMQP) to Azure Service Bus`.
 
@@ -152,9 +186,7 @@ Then you can migrate the sample Java application `asset-manager` to Azure.
    
 ### Task 6: Expose health endpoints using Custom Tasks
 
-In this section, you will use custom tasks to expose health endpoints for your applications instead of writing code yourself. The following steps demonstrate how to generate custom tasks based on external web links and proper prompts.
-
-> Note: Custom tasks are not supported for the IntelliJ IDEA plugin. If you are using IntelliJ IDEA, you can skip this section.
+In this task, you will create a custom Copilot task to expose health endpoints using Spring Boot Actuator. You will define a task prompt, attach external documentation as reference, let Copilot generate the required changes, and apply the modifications to enable application health monitoring.
 
 1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. Click the `+` button in the **Tasks** view to create a custom task.
 
@@ -191,8 +223,7 @@ In this section, you will use custom tasks to expose health endpoints for your a
 
 ### Task 7: Containerize Applications
 
-Now that you have successfully migrated your Java application to use Azure services, the next step is to prepare it for cloud deployment by containerizing both the web and worker modules. In this section, you will use **Containerization Tasks** to containerize your migrated applications.
-> Note: If you encounter any issues with the previous migration step, you can directly proceed with the containerization step using the [workshop/expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/expected/asset-manager) branch.
+In this task, you will containerize the web and worker modules of the application using Containerization Tasks. Copilot will generate Dockerfiles, build container images, resolve build issues, and prepare the application for cloud deployment inside containers.
 
 1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Java** -> **Containerization Tasks** -> **Containerize Application**.
   
@@ -232,8 +263,7 @@ Now that you have successfully migrated your Java application to use Azure servi
 
 ### Task 8: Deploy to Azure
 
-At this point, you have successfully migrated the sample Java application `asset-manager` to Azure Database for PostgreSQL (Spring), Azure Blob Storage, and Azure Service Bus, and exposed health endpoints via Spring Boot Actuator. Now, you can start the deployment to Azure.
-> Note: If you encounter any issues with the previous migration step, you can directly proceed with the deployment step using the [workshop/expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/expected/asset-manager) branch.
+In this task, you will deploy the fully modernized and containerized application to Azure using a predefined deployment task. Copilot will generate a deployment plan, provision all required Azure resources, create deployment scripts, execute the deployment, and verify successful provisioning in the Azure portal.
 
 1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Common Tasks** -> **Deployment Tasks** -> **Provision Infrastructure and Deploy to Azure**.
 
@@ -249,6 +279,8 @@ At this point, you have successfully migrated the sample Java application `asset
 
    ![Deployment progress](images/12.png)
 
+   > Note: If you encounter any issues with the deployment step, you can refer to the expected Copilot-generated deployment scripts in `/.azure` folder of the [workshop/deployment-expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/deployment-expected/asset-manager) branch to compare your deployment scripts and troubleshoot the problems.
+
 1. In the Edge browser, navigate to the **Azure portal** and select **Resource Groups**.
 
    ![Deployment progress](images/15.png)
@@ -260,8 +292,6 @@ At this point, you have successfully migrated the sample Java application `asset
 3. You will now see that all the resources have been successfully deployed in the Azure portal.
 
    ![Deployment progress](images/13.png)
-
-> Note: If you encounter any issues with the deployment step, you can refer to the expected Copilot-generated deployment scripts in `/.azure` folder of the [workshop/deployment-expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/deployment-expected/asset-manager) branch to compare your deployment scripts and troubleshoot the problems.
 
 ## Summary
 
