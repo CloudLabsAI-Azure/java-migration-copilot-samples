@@ -3,7 +3,7 @@
 ### Estimated Duration: 120 Minutes 
 
 ## Overview
-In this lab, you will use the **GitHub Copilot app modernization** extension to assess, upgrade, migrate, and finally deploy the project to Azure.
+In this lab, you will use the GitHub Copilot App Modernization extension to evaluate, modernize, and migrate a Java application. You will begin by assessing the application's current state, then upgrade its runtime and frameworks, migrate its components to Azure services, containerize it, and finally deploy the modernized application to Azure. This end-to-end workflow demonstrates how Copilot can accelerate application modernization and cloud migration.
 
 ## Lab Objectives
 
