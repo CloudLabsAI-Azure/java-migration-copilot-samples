@@ -64,8 +64,8 @@ In this task, you will run and explore the sample Java application and use the G
 1. In a new tab, enter **[http://localhost:15672](http://localhost:15672) (1)**.
    Sign in using the credentials:
 
-   * **Username:** guest (2)
-   * **Password:** guest (3)
+   * **Username:** guest **(2)**
+   * **Password:** guest **(3)**
      Then click **Login (4)**.
 
    ![](images/32.png)
@@ -122,6 +122,8 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/10.png)
 
+In this task, you have successfully analyzed the existing Java application using GitHub Copilot App Modernization to identify framework versions, code issues, migration blockers, and readiness for modernization and cloud migration.   
+
 ### Task 2: Upgrade Runtime and Frameworks
 
 In this task, you will use predefined Copilot tasks to automatically upgrade the project’s Java runtime version and frameworks such as Spring/Spring Boot. Copilot will analyze the application, apply necessary version updates, recommend fixes, and commit changes in a new branch.
@@ -133,6 +135,8 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
 
    ![](images/9.png)
+
+In this task, you have successfully upgraded the Java runtime and Spring/Spring Boot frameworks using predefined Copilot tasks to ensure the application is secure, modern, and cloud-ready.   
 
 ### Task 3: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
 
@@ -158,6 +162,8 @@ In this task, you will migrate the application's database layer from the local P
 
    >**Note:** When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning or deployment scripts are running.
 
+In this task, you have migrated the application’s database from a local PostgreSQL instance to Azure Database for PostgreSQL Flexible Server by generating and executing an automated migration plan.
+
 ### Task 4: Migrate to Azure Blob Storage using Predefined Tasks
 
 In this task, you will replace the application's dependency on AWS S3 with Azure Blob Storage. Using predefined tasks, Copilot will update the storage configuration, generate necessary migration scripts, provision blob storage resources, and apply all required code modifications.
@@ -169,6 +175,8 @@ In this task, you will replace the application's dependency on AWS S3 with Azure
 1. When prompted, click **Continue**/**Allow/Enable more AI features** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning or deployment scripts are running.
 
 1. The following steps are the same as the above PostgreSQL server migration.
+
+In this task, you have replaced AWS S3 with Azure Blob Storage by updating storage configurations, provisioning cloud resources, and applying the required application code changes.
 
 ### Task 5: Migrate to Azure Service Bus using Predefined Tasks
 
@@ -183,6 +191,8 @@ In this task, you will migrate the application's messaging component from Rabbit
 1. The following steps are the same as the above PostgreSQL server migration.
 
    ![](images/22.png)
+
+In this task, you have migrated the messaging layer from RabbitMQ to Azure Service Bus by refactoring application messaging, updating configurations, and provisioning Azure messaging resources.   
    
 ### Task 6: Expose health endpoints using Custom Tasks
 
@@ -220,6 +230,8 @@ In this task, you will create a custom Copilot task to expose health endpoints u
 1. Follow the same steps as the predefined task to review and apply the changes.
 
 1. Review the proposed code changes and click **Keep** to apply them.
+
+In this task, you have created and executed a custom Copilot task to enable Spring Boot Actuator health endpoints for application monitoring and Azure readiness probes.
 
 ### Task 7: Containerize Applications
 
@@ -261,6 +273,8 @@ In this task, you will containerize the web and worker modules of the applicatio
     
 1. Copilot Agent will help generate Dockerfile, build Docker images and fix build errors if there are any. Click **Keep** to apply the generated code.
 
+in this task, you have containerized the application components by generating Dockerfiles, building container images, and fixing build issues using Copilot’s containerization tasks.
+
 ### Task 8: Deploy to Azure
 
 In this task, you will deploy the fully modernized and containerized application to Azure using a predefined deployment task. Copilot will generate a deployment plan, provision all required Azure resources, create deployment scripts, execute the deployment, and verify successful provisioning in the Azure portal.
@@ -268,6 +282,10 @@ In this task, you will deploy the fully modernized and containerized application
 1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Common Tasks** -> **Deployment Tasks** -> **Provision Infrastructure and Deploy to Azure**.
 
     ![Run Deployment task](images/deployment-run-task.png)
+
+1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. **Edit** the last sentence of the prompt to **Hosting service: AKS**.
+
+   ![Deployment progress](images/image.png)
 
 1. Click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
 
@@ -277,21 +295,33 @@ In this task, you will deploy the fully modernized and containerized application
 
 1. Once deployment completed you can deployment status as below: 
 
-   ![Deployment progress](images/12.png)
+   ![Deployment progress](images/image2.png)
 
-   > Note: If you encounter any issues with the deployment step, you can refer to the expected Copilot-generated deployment scripts in `/.azure` folder of the [workshop/deployment-expected](https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/deployment-expected/asset-manager) branch to compare your deployment scripts and troubleshoot the problems.
+    > **Note:** The response generated by the above prompt may vary. If your prompt returns an error, press **Ctrl + C** to copy the error and **Ctrl + V** to paste it in the Copilot chat and run. GitHub Copilot should automatically resolve the errors.
+
+    >**Note:** If you face error: **Hmmm… can't reach this page**, terminate the chat and add the below given prompt.
+
+    ```
+    Migrate the PostgreSQL database to Azure Database for PostgreSQL Flexible Server, and deploy only the web application to Azure Kubernetes Service (AKS).
+    ```
+ 
+1. Navigate to Pods and check if they are in running state and try to access the External IP.
+
+   >**Note:** If you encounter any errors copy those errors and paste in Copilot chat. GitHub Copilot should automatically resolve the errors.
 
 1. In the Edge browser, navigate to the **Azure portal** and select **Resource Groups**.
 
    ![Deployment progress](images/15.png)
 
-2. On the **Resource Groups** page, click **rg-asset-manager-demo**.
+2. On the **Resource Groups** page, select the newly created resource group.
 
    ![Deployment progress](images/14.png)
 
 3. You will now see that all the resources have been successfully deployed in the Azure portal.
 
-   ![Deployment progress](images/13.png)
+   ![Deployment progress](images/image1.png)
+
+In thistask, you have deployed the fully modernized and containerized application to Azure Kubernetes Service (AKS) by provisioning infrastructure, executing deployment scripts, and validating resources in the Azure portal.
 
 ## Summary
 
@@ -306,5 +336,6 @@ In this lab, you have completed the following:
 - Containerized Applications
 - Deployed to Azure
 
-### You have successfully completed the lab.
+### You have successfully completed the lab!
 
+In this lab, you used the **GitHub Copilot App Modernization** extension to assess, modernize, containerize, and deploy a Java application to Azure through a complete end-to-end modernization workflow. You evaluated the existing application, upgraded the Java runtime and frameworks, migrated the database to **Azure Database for PostgreSQL Flexible Server**, moved storage to **Azure Blob Storage**, transitioned messaging to **Azure Service Bus**, enabled **health monitoring with Spring Boot Actuator**, containerized the application using **Docker**, and successfully deployed it to **Azure Kubernetes Service (AKS)**. This lab demonstrated how GitHub Copilot accelerates Java application modernization and cloud migration with automation, intelligence, and minimal manual effort.
