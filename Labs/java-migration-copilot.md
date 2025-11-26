@@ -30,12 +30,12 @@ In this task, you will run and explore the sample Java application and use the G
    ![](images/24.png)
 
 1. In **File Explorer**, navigate to:
-   **C:\LabFiles\java-migration-copilot-samples\assesrt-manager**
+   **C:\LabFiles\java-migration-copilot-samples\asset-manager**
 
    ![](images/25.png)
 
 1. In the File Explorer address bar, replace the path
-   **C:\LabFiles\java-migration-copilot-samples\assesrt-manager**
+   **C:\LabFiles\java-migration-copilot-samples\asset-manager**
    with **cmd**, then press **Enter**.
 
    ![](images/26.png)
