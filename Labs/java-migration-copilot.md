@@ -1,6 +1,6 @@
 # GitHub CoPilot Java App Modernization
 
-### Estimated Duration: 240 Minutes 
+### Estimated Duration: 4 Hours 
 
 ## Overview
 
