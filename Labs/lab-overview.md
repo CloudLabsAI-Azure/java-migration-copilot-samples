@@ -1,4 +1,4 @@
-# GitHub CoPilot Java App Modernization - Hackathon
+# GitHub Copilot Java App Modernization - Hackathon
 
 ### Introduction
 
