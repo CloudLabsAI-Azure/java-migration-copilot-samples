@@ -1,4 +1,4 @@
-# Getting Started with Your GitHub CoPilot Java App Modernization Workshop
+# Getting Started with Your GitHub Copilot Java App Modernization Workshop
  
 Welcome to your GitHub CoPilot Java App Modernization Workshop! We've prepared a seamless environment for you to explore and learn about integrating, transforming, and consolidating data from various structured, unstructured, and streaming data systems into a suitable schema for building analytics solutions. Let's begin by making the most of this experience:
  
