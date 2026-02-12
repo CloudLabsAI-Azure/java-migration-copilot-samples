@@ -1,4 +1,4 @@
-# Challenge Guide: GitHub Copilot Java App Modernization
+# Challenge: GitHub Copilot Java App Modernization
 
 ### Estimated Duration: 120 Minutes 
 
