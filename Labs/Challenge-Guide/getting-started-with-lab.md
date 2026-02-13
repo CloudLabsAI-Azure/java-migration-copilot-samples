@@ -1,4 +1,6 @@
-# Getting Started page
+# GitHub Copilot Java App Modernization Attendee Guide
+
+## Getting Started page
 
 ## Accessing Your Lab Environment
  
