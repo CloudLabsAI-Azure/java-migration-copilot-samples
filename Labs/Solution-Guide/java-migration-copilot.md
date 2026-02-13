@@ -1,4 +1,4 @@
-# GitHub Copilot Java App Modernization
+# GitHub CoPilot Java App Modernization Trainer Guide
 
 ### Estimated Duration: 4 Hours 
 
