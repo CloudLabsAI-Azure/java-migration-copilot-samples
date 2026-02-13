@@ -1,4 +1,6 @@
-# Technical Prerequisites:
+# GitHub Copilot Java App Modernization Attendee Guide
+
+## Technical Prerequisites:
 
 Before you begin, ensure that you have the following prerequisites installed and configured in CloudLabs provided Integrated Environment (JumpVM), which you are going to use throughout the hackathon:
  
