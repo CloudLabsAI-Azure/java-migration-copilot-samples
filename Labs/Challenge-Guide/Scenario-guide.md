@@ -1,4 +1,4 @@
-# Challenge: GitHub Copilot Java App Modernization
+# GitHub Copilot Java App Modernization Attendee Guide
 
 ### Estimated Duration: 120 Minutes 
 
@@ -177,6 +177,7 @@ This challenge provides hands-on experience with **AI-assisted modernization**, 
 - [Spring Boot Actuator Documentation](https://docs.spring.io/spring-boot/reference/actuator/)
 - [Introduction to Docker Containers](https://learn.microsoft.com/en-us/training/modules/intro-to-docker-containers/)
 - [Azure Kubernetes Service (AKS) Overview](https://learn.microsoft.com/en-us/azure/aks/)
+
 
 
 
