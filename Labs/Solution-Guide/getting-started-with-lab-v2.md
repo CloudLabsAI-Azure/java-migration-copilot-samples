@@ -1,4 +1,4 @@
-# Microsoft Azure Hackathon: GitHub CoPilot Java App Modernization Trainer Guide
+# GitHub CoPilot Java App Modernization Trainer Guide
  
 Welcome to your GitHub CoPilot Java App Modernization ! We've prepared a seamless environment for you to explore and learn about integrating, transforming, and consolidating data from various structured, unstructured, and streaming data systems into a suitable schema for building analytics solutions. Let's begin by making the most of this experience:
  
