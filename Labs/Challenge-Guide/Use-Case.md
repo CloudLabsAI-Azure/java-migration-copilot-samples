@@ -1,4 +1,6 @@
-# Hackathon Mission and Use-Case
+# GitHub Copilot Java App Modernization Attendee Guide
+
+## Hackathon Mission and Use-Case
 
 Mission: Demonstrate a rapid, repeatable modernization pipeline for a Java monolith that reduces operational overhead and migrates dependencies to managed cloud services while preserving application functionality.
 
