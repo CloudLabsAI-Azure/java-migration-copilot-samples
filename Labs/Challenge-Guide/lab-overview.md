@@ -1,4 +1,4 @@
-# Microsoft Azure Hackathon: GitHub Copilot Java App Modernization Attendee Guide
+# GitHub Copilot Java App Modernization Attendee Guide
 
 ### Introduction
 
