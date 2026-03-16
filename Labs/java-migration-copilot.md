@@ -106,12 +106,10 @@ In this task, you will run and explore the sample Java application and use the G
 
     ![](images/8.png)
 
-1. Click on the **Extensions** (1) button on the left-hand banner, search for **GitHub Copilot modernization** (2) and **Install** (3) the extension.
-
-    ![](images/gc23.png)
- 
 1. In **Visual Studio Code**, click the **GitHub Copilot icon 🤖**.
 
+    ![](images/gc25.png)
+    
 1. Select **Enable more AI Features**.
 
 1. In the **Enable more features** tab, click **Sign in/Continue with GitHub**.
@@ -131,6 +129,18 @@ In this task, you will run and explore the sample Java application and use the G
 1. On the **Select user to authorize Visual Studio Code** page, click on **Authorize Visual-Studio-Code**.
 
    ![](images/3.png)
+
+1. Click on the **Extensions** (1) button on the left-hand banner, search for **GitHub Copilot modernization** (2) and **Install** (3) the extension.
+
+    ![](images/gc23.png)
+
+1. In **GitHub Copilot Chat**, locate the **model selector** below the prompt text box. The current model name appears at the bottom of the chat input area.
+
+   ![](images/gc26.png)
+
+1. Click on the **current model name** to open the list of available AI models.
+
+1. Select the **Claude Sonnet 4.5** model from the available options to continue using it for your prompts.
 
 1. Open the **GitHub Copilot modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Start Assessment (2)** button to start the app assessment.
 
