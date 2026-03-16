@@ -32,10 +32,16 @@ In this task, you will run and explore the sample Java application and use the G
 
 1. On the **Welcome to Docker** page, click **Skip**.
 
+   ![](images/gc27.png)
+   
 1. On the **Welcome Survey** page, click **Skip**.
 
+   ![](images/gc28.png)
+   
 1. On the **Sign in** page, click **Skip**.
 
+   ![](images/gc29.png)
+   
 1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command and **Restart**
 
    ```
