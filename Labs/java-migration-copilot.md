@@ -25,19 +25,34 @@ In this task, you will run and explore the sample Java application and use the G
 1. On the **LabVM**, click **Start (1)** at the bottom of the screen, search for **Docker Desktop (2)**, and select **Docker Desktop (3)** from the menu.
 
    ![](images/11.png)
+   
+1. Click **Accept** to agree to the **Docker Subscription Service Agreement**.
 
+   ![](images/gc22.png)
+
+1. On the **Welcome to Docker** page, click **Skip**.
+
+1. On the **Welcome Survey** page, click **Skip**.
+
+1. On the **Sign in** page, click **Skip**.
+
+1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command and **Restart**
+
+   ```
+   wsl --update
+   ```
+
+   ![](images/gc21.png)
+   
 2. On the **LabVM**, click **Start** at the bottom of the screen and select **File Explorer** from the menu.
 
    ![](images/24.png)
 
-1. In **File Explorer**, navigate to:
-   **C:\LabFiles\java-migration-copilot-samples\asset-manager**
+1. In **File Explorer**, navigate to: **C:\LabFiles\java-migration-copilot-samples\asset-manager**
 
    ![](images/25.png)
 
-1. In the File Explorer address bar, replace the path
-   **C:\LabFiles\java-migration-copilot-samples\asset-manager**
-   with **cmd**, then press **Enter**.
+1. In the File Explorer address bar, replace the path **C:\LabFiles\java-migration-copilot-samples\asset-manager** with **cmd**, then press **Enter**.
 
    ![](images/26.png)
 
@@ -90,14 +105,16 @@ In this task, you will run and explore the sample Java application and use the G
    > **Note:** If a pop-up comes for **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
 
     ![](images/8.png)
+
+1. Click on the **Extensions** (1) button on the left-hand banner, search for **GitHub Copilot modernization** (2) and **Install** (3) the extension.
+
+    ![](images/gc23.png)
  
-1. Open the **GitHub Copilot app modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Migrate to Azure (2)** button to start the app assessment.
+1. In **Visual Studio Code**, click the **GitHub Copilot icon 🤖**.
 
-   ![Trigger Assessment](images/trigger-assessment.png)
+1. Select **Enable more AI Features**.
 
-1. In the GitHub Copilot App Modernization lab, when the GitHub sign-in pop-up appears, click on **Allow**.
-
-   ![](images/1.png)
+1. In the **Enable more features** tab, click **Sign in/Continue with GitHub**.
 
 1. On the **Sign in to GitHub** tab, you will see the login screen. In that screen, enter the following **email: odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs**. Then click on **Sign in with your identity provider** **(2)**. 
    
@@ -111,14 +128,16 @@ In this task, you will run and explore the sample Java application and use the G
    
     ![](images/githubpage.png)
 
-1. On the “Select user to authorize Visual Studio Code” page, click on **Authorize Visual-Studio-Code**.
+1. On the **Select user to authorize Visual Studio Code** page, click on **Authorize Visual-Studio-Code**.
 
    ![](images/3.png)
 
-1. Navigate back to Visual Studio Code and wait for the assessment to complete and the report to be generated.
+1. Open the **GitHub Copilot modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Start Assessment (2)** button to start the app assessment.
 
-   ![](images/6.png)
+   ![Trigger Assessment](images/gc24.png)
 
+1. Please wait until the assessment is completed and the report is generated.
+   
 1. Review the **Assessment Report**. Select the **Issues** tab to view the proposed solutions for the issues identified in the report.
 
    ![](images/10.png)
@@ -137,6 +156,8 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    ![](images/9.png)
 
+   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   
 In this task, you have successfully upgraded the Java runtime and Spring/Spring Boot frameworks using predefined Copilot tasks to ensure the application is secure, modern, and cloud-ready.   
 
 ### Task 3: Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks
@@ -161,8 +182,10 @@ In this task, you will migrate the application's database layer from the local P
 
    ![Confirm Solution](images/36.png)
 
-   >**Note:** When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning or deployment scripts are running.
+   >**Note:** When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning/**Todos** or deployment scripts are running.
 
+   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   
 In this task, you have migrated the application’s database from a local PostgreSQL instance to Azure Database for PostgreSQL Flexible Server by generating and executing an automated migration plan.
 
 ### Task 4: Migrate to Azure Blob Storage using Predefined Tasks
@@ -177,6 +200,8 @@ In this task, you will replace the application's dependency on AWS S3 with Azure
 
 1. The following steps are the same as the above PostgreSQL server migration.
 
+   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   
 In this task, you have replaced AWS S3 with Azure Blob Storage by updating storage configurations, provisioning cloud resources, and applying the required application code changes.
 
 ### Task 5: Migrate to Azure Service Bus using Predefined Tasks
@@ -193,13 +218,15 @@ In this task, you will migrate the application's messaging component from Rabbit
 
    ![](images/22.png)
 
+   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   
 In this task, you have migrated the messaging layer from RabbitMQ to Azure Service Bus by refactoring application messaging, updating configurations, and provisioning Azure messaging resources.   
    
 ### Task 6: Expose health endpoints using Custom Tasks
 
 In this task, you will create a custom Copilot task to expose health endpoints using Spring Boot Actuator. You will define a task prompt, attach external documentation as reference, let Copilot generate the required changes, and apply the modifications to enable application health monitoring.
 
-1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. Click the `+` button in the **Tasks** view to create a custom task.
+1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. Click the `+` button in the **Tasks** view to create a custom task.
 
    ![Create Formula From Source Control](images/create-formula-from-source-control.png)
 
@@ -232,47 +259,65 @@ In this task, you will create a custom Copilot task to expose health endpoints u
 
 1. Review the proposed code changes and click **Keep** to apply them.
 
+   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   
 In this task, you have created and executed a custom Copilot task to enable Spring Boot Actuator health endpoints for application monitoring and Azure readiness probes.
 
 ### Task 7: Containerize Applications
 
 In this task, you will containerize the web and worker modules of the application using Containerization Tasks. Copilot will generate Dockerfiles, build container images, resolve build issues, and prepare the application for cloud deployment inside containers.
 
-1. Open the sidebar of `GITHUB COPILOT APP MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Java** -> **Containerization Tasks** -> **Containerize Application**.
+1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Java** -> **Containerization Tasks** -> **Containerize Application**.
   
     ![Run Containerize Application task](images/containerization-run-task.png)
 
-1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning or deployment scripts are running.
+1. When prompted, click **Continue** or **Allow** in chat notifications, or type **y** / **yes** in the terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and complete the deployment.  
 
-   > **Note**: If prompt to select az login then follow below steps: 
+   **Do not interrupt** while the provisioning or deployment scripts are running.
 
-      1. Select **Work or school account** from the prompt and click on continue.
+   > **Note:** If you are prompted to select **az login**, follow the steps below:
 
-         ![](images/ex1img3.png)
+   1. Select **Work or school account** from the prompt and click **Continue**.
 
-      1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
-         
-         - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+      ![](images/ex1img3.png)
 
-            ![Enter Your Username](images/lab8-1.7.png)
+   2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
 
-      1. Next, provide your password:
+      - **Email/Username:** `<inject key="AzureAdUserEmail"></inject>`
 
-         - **Password:** <inject key="AzureAdUserPassword"></inject>
+      ![Enter Your Username](images/lab8-1.7.png)
 
-            ![Enter Your Password](images/lab8-1.8.png)
+   3. Enter the password:
 
-      1. When prompts, click on **No, sign in to this app only** and continue.
+      - **Password:** `<inject key="AzureAdUserPassword"></inject>`
 
-      1. Return to your **Visual Studio Code** terminal, now it prompts you to select subscription with a list of subscriptions, enter **1** and hit enter.
+      ![Enter Your Password](images/lab8-1.8.png)
 
-1. A predefined prompt will be populated in the Copilot Chat panel with Agent Mode. Copilot Agent will start to analyze the workspace and to create a **containerization-plan.copiotmd** with the containerization plan.
+   4. When prompted, select **No, sign in to this app only** and continue.
+
+   5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
+      Enter **1** and press **Enter**.
+
+   > **Note:** If the **az login** prompt does **not appear in the browser**:
+   >
+   > 1. Open a **terminal in VS Code**.
+   > 2. Ensure the terminal is opened under the **asset-manager** folder.
+   > 3. Run the following command and complete the sign-in process:
+   >
+   > ```
+   > az login --use-device-code
+   > ```
+
+2. A predefined prompt will be populated in the **Copilot Chat panel** with **Agent Mode** enabled.  
+   Copilot Agent will analyze the workspace and create a file named **containerization-plan.copilotmd** containing the containerization plan.
 
    ![Containerization prompt and plan](images/containerization-plan.png)
 
 1. View the plan and collaborate with Copilot Agent as it follows the **Execution Steps** in the plan by clicking **Continue**/**Allow** in pop-up chat notifications to run commands. Some of the execution steps leverage agentic tools of **Container Assist**.
     
 1. Copilot Agent will help generate Dockerfile, build Docker images and fix build errors if there are any. Click **Keep** to apply the generated code.
+
+   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
 
 in this task, you have containerized the application components by generating Dockerfiles, building container images, and fixing build issues using Copilot’s containerization tasks.
 
@@ -294,7 +339,9 @@ In this task, you will deploy the fully modernized and containerized application
 
 1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. You can also check the deployment status in **progress.copilotmd**. **DO NOT interrupt** when provisioning or deployment scripts are running.
 
-1. Once deployment completed you can deployment status as below: 
+   >**Note** : Copilot may take approximately 30-45 minutes to complete the task.
+
+1. Once deployment completed you can view the deployment status as below: 
 
    ![Deployment progress](images/image2.png)
 
