@@ -242,37 +242,33 @@ In this task, you have migrated the messaging layer from RabbitMQ to Azure Servi
 
 In this task, you will create a custom Copilot task to expose health endpoints using Spring Boot Actuator. You will define a task prompt, attach external documentation as reference, let Copilot generate the required changes, and apply the modifications to enable application health monitoring.
 
-1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. Click the `+` button in the **Tasks** view to create a custom task.
+1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. Click the `+` button in the **Tasks** view to create a Custom Skill.
 
    ![Create Formula From Source Control](images/create-formula-from-source-control.png)
 
-1. In the opened tab, enter the **Task Name** and **Task Prompt** as shown below:
+1. A **Create a Skill** form opens with the following fields. Fill them in as shown below:
 
-   - **Task Name (1)**: Expose health endpoint via Spring Boot Actuator
-   - **Task Prompt (2)**: You are a Spring Boot developer assistant, follow the Spring Boot Actuator documentation to add basic health endpoints for Azure Container Apps deployment.
+     - **Skill Name:** `expose-health-endpoint`
+     - **Skill Description:** This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness.        
+     - **Skill Content:**  You are a Spring Boot developer assistant. Follow the **Spring Boot Actuator documentation** to add basic health endpoints required for Azure Container Apps deployment.
 
-1. Click the **Add References (3)** button to add the Spring Boot Actuator official documentation as references.
-
-   ![Health endpoint task](images/18.png)
-   
-1. In the popped-up quick-pick window, select **External links**. 
-
-   ![Health endpoint task](images/20.png)
-
-1. Then paste the following link: `https://docs.spring.io/spring-boot/reference/actuator/endpoints.html` **(1)** and click on **OK (2)**. 
-
-   ![Health endpoint task](images/19.png)
-   
+   ![](images/gc32.png)
+                     
 1. Click **Save** to create the task.
 
-   ![](images/17.png)
+   ![](images/gc33.png)
 
 1. Click the **Run** button to trigger the custom task.
 
-   ![](images/16.png)
+   ![](images/gc34.png)
+   
+1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. Edit and add the following sentence to the prompt.
 
-1. Follow the same steps as the predefined task to review and apply the changes.
-
+   ```
+   Resource link : https://docs.spring.io/spring-boot/reference/actuator/endpoints.html
+   ```
+   ![](images/gc35.png)
+   
 1. Review the proposed code changes and click **Keep** to apply them.
 
    >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
@@ -301,13 +297,9 @@ In this task, you will containerize the web and worker modules of the applicatio
 
       - **Email/Username:** `<inject key="AzureAdUserEmail"></inject>`
 
-      ![Enter Your Username](images/lab8-1.7.png)
-
    3. Enter the password:
 
       - **Password:** `<inject key="AzureAdUserPassword"></inject>`
-
-      ![Enter Your Password](images/lab8-1.8.png)
 
    4. When prompted, select **No, sign in to this app only** and continue.
 
