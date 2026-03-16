@@ -377,15 +377,27 @@ In this task, you will deploy the fully modernized and containerized application
 
    ![Deployment progress](images/15.png)
 
-2. On the **Resource Groups** page, select the newly created resource group.
+1. On the **Resource Groups** page, select the newly created resource group.
 
    ![Deployment progress](images/14.png)
 
-3. You will now see that all the resources have been successfully deployed in the Azure portal.
+1. You will now see that all the resources have been successfully deployed in the Azure portal.
 
    ![Deployment progress](images/image1.png)
 
-In thistask, you have deployed the fully modernized and containerized application to Azure Kubernetes Service (AKS) by provisioning infrastructure, executing deployment scripts, and validating resources in the Azure portal.
+1. To access the web application, Navigate to the **AKS resource** in the Azure portal.
+
+1. Select **Services and Ingresses**.
+
+   ![Deployment progress](images/gc30.png)
+   
+1. Copy the **IP address** of the service.
+
+1. Paste the IP address into your browser to access the web application.
+
+   ![Deployment progress](images/gc31.png)
+   
+In this task, you have deployed the fully modernized and containerized application to Azure Kubernetes Service (AKS) by provisioning infrastructure, executing deployment scripts, and validating resources in the Azure portal.
 
 ## Summary
 
