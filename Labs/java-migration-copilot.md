@@ -295,11 +295,11 @@ In this task, you will containerize the web and worker modules of the applicatio
 
    2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
 
-      - **Email/Username:** `<inject key="AzureAdUserEmail"></inject>`
+      - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
    3. Enter the password:
 
-      - **Password:** `<inject key="AzureAdUserPassword"></inject>`
+      - **Password:** <inject key="AzureAdUserPassword"></inject>
 
    4. When prompted, select **No, sign in to this app only** and continue.
 
