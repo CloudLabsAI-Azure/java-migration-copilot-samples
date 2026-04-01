@@ -278,19 +278,19 @@ In this task, you will create a custom Copilot task to expose health endpoints u
 
 1. A **Create a Skill** form opens with the following fields. Fill them in as shown below:
 
-     - **Skill Name:** `expose-health-endpoint`
-     - **Skill Description:** This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness.        
-     - **Skill Content:**  You are a Spring Boot developer assistant. Follow the **Spring Boot Actuator documentation** to add basic health endpoints required for Azure Container Apps deployment.
+     - **Skill Name:** `expose-health-endpoint` **(1)**
+     - **Skill Description:** This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness. **(2)** 
+     - **Skill Content:**  You are a Spring Boot developer assistant. Follow the **Spring Boot Actuator documentation** to add basic health endpoints required for Azure Container Apps deployment. **(3)**
 
-   ![](images/gc32.png)
+   ![](images/new/b1.png)
                      
 1. Click **Save** to create the task.
 
-   ![](images/gc33.png)
+   ![](images/new/b2.png)
 
-1. Click the **Run** button to trigger the custom task.
+1. Click the **Run Task** button to trigger the custom task.
 
-   ![](images/gc34.png)
+   ![](images/new/b3.png)
    
 1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. Edit and add the following sentence to the prompt.
 
@@ -309,7 +309,7 @@ In this task, you have created and executed a custom Copilot task to enable Spri
 
 In this task, you will containerize the web and worker modules of the application using Containerization Tasks. Copilot will generate Dockerfiles, build container images, resolve build issues, and prepare the application for cloud deployment inside containers.
 
-1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Java** -> **Containerization Tasks** -> **Containerize Application**.
+1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Common Tasks** -> **Containerize Tasks** -> **Containerize Application**.
   
     ![Run Containerize Application task](images/containerization-run-task.png)
 
@@ -333,8 +333,12 @@ In this task, you will containerize the web and worker modules of the applicatio
 
    4. When prompted, select **No, sign in to this app only** and continue.
 
+      ![](images/new/b5.png)
+
    5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
       Enter **1** and press **Enter**.
+
+      ![](images/new/b6.png)
 
    > **Note:** If the **az login** prompt does **not appear in the browser**:
    >
@@ -357,7 +361,11 @@ In this task, you will containerize the web and worker modules of the applicatio
 
    >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
 
-in this task, you have containerized the application components by generating Dockerfiles, building container images, and fixing build issues using Copilot’s containerization tasks.
+1. Navigate to the **worker (1)** folder in VS Code and verify that the **Dockerfile (2)** is created.
+
+    ![](images/new/b4.png)
+
+In this task, the application was containerized using the GitHub Copilot App Modernization Containerization Task, where Copilot generated the containerization-plan.copilotmd, created Dockerfiles for the application modules, and successfully built Docker images with all changes accepted via “Keep”. These Docker artifacts (Dockerfiles and images) are then used as deployment inputs in Task 8, where the application is provisioned and deployed to Azure Kubernetes Service.
 
 ### Task 8: Deploy to Azure
 
