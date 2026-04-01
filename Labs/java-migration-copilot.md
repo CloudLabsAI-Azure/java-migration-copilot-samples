@@ -202,19 +202,31 @@ In this task, you will migrate the application's database layer from the local P
 
    ![Confirm Solution](images/34.png)
 
+   ![Confirm Solution](images/new/a1.png)
+
 1. After clicking the **Run Task** button in the Assessment Report, the Copilot Chat panel will open with Agent Mode.
 
 1. The Copilot Agent will first analyze the project and generate a migration plan.
+
+1. If prompted, click **Allow** to grant the required permissions.
+
+1. In the Visual Studio Code prompt, click **Allow** to sign in with GitHub.
+
+   ![Confirm Solution](images/new/a2.png)
+
+1. In the account selection prompt, choose **odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs** to proceed with authentication.
+
+   ![Confirm Solution](images/new/a3.png)
 
 1. After the plan is generated, Copilot Chat will stop with two generated files: **plan.md** and **progress.md**. If prompted, enter "Continue" or "Proceed" in the chat to confirm and execute the plan.
 
    ![Confirm Solution](images/35.png)
 
-1. When the code is migrated, the extension will prepare the **CVE Validation and Fixing** process. Click **Allow** to proceed.
-
 1. Review the proposed code changes and click **Keep** to apply them.
 
    ![Confirm Solution](images/36.png)
+
+   ![Confirm Solution](images/new/a4.png)
 
    >**Note:** When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning/**Todos** or deployment scripts are running.
 
