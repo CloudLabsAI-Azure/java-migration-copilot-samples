@@ -54,11 +54,11 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/24.png)
 
-1. In **File Explorer**, navigate to: **C:\LabFiles\java-migration-copilot-samples\asset-manager**
+1. In **File Explorer**, navigate to: `C:\LabFiles\java-migration-copilot-samples\asset-manager`
 
    ![](images/25.png)
 
-1. In the File Explorer address bar, replace the path **C:\LabFiles\java-migration-copilot-samples\asset-manager** with **cmd**, then press **Enter**.
+1. In the File Explorer address bar, replace the path `C:\LabFiles\java-migration-copilot-samples\asset-manager` with **cmd**, then press **Enter**.
 
    ![](images/26.png)
 
@@ -104,7 +104,7 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/7.png)
 
-1. From File Explorer, navigate to **C:\LabFiles\java-migration-copilot-samples (1)**, select the **asset-manager (2)** folder from the Quick Access section, and click on **Select Folder (3)**.
+1. From File Explorer, navigate to `C:\LabFiles\java-migration-copilot-samples` **(1)**, select the **asset-manager (2)** folder from the Quick Access section, and click on **Select Folder (3)**.
 
    ![](images/4.png)
 
@@ -116,13 +116,17 @@ In this task, you will run and explore the sample Java application and use the G
 
     ![](images/gc25.png)
     
-1. Select **Enable more AI Features**.
+1. Select **Use AI Features**.
 
-1. In the **Enable more features** tab, click **Sign in/Continue with GitHub**.
+    ![](images/new/1.png)
+
+1. In the **Sign in to use AI Features** tab, click **Continue with GitHub**.
+
+    ![](images/new/2.png)
 
 1. On the **Sign in to GitHub** tab, you will see the login screen. In that screen, enter the following **email: odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs**. Then click on **Sign in with your identity provider** **(2)**. 
    
-   ![](images/githublogin.png)
+   ![](images/new/3.png)
           
 1. Next, On the **Single sign-on to CLoudLabs Organizations** select **Continue**.
 
@@ -136,33 +140,47 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/3.png)
 
-1. Click on the **Extensions** (1) button on the left-hand banner, search for **GitHub Copilot modernization** (2) and **Install** (3) the extension.
+1. If prompted, click **Open** to allow vscode.dev to launch the project in **Visual Studio Code**.
+
+   ![](images/new/4.png)
+
+1. Click on the **Extensions (1)** button on the left-hand banner, search for **GitHub Copilot modernization (2)** and **Install (3)** the extension.
 
     ![](images/gc23.png)
 
-1. In **GitHub Copilot Chat**, locate the **model selector** below the prompt text box. The current model name appears at the bottom of the chat input area.
+1. In **GitHub Copilot Chat**, click the **model selector** located below the prompt text box.
 
-   ![](images/gc26.png)
+   ![](images/new/5.png)
 
-1. Click on the **current model name** to open the list of available AI models.
+1. Select the **Claude Sonnet 4.6** model from the available options to continue using it for your prompts.
 
-1. Select the **Claude Sonnet 4.5** model from the available options to continue using it for your prompts.
+   ![](images/new/6.png)
 
 1. Open the **GitHub Copilot modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Start Assessment (2)** button to start the app assessment.
 
-   ![Trigger Assessment](images/gc24.png)
+   ![](images/gc24.png)
+
+1. On the Assessment Reports screen, select **Recommended Assessment** to proceed with the default evaluation setup.
+
+   ![](images/new/7.png)
+
+1. In the Recommended Assessment dialog, select the required domains and click **OK** to continue.
+
+   ![](images/new/8.png)
 
 1. Please wait until the assessment is completed and the report is generated.
    
 1. Review the **Assessment Report**. Select the **Issues** tab to view the proposed solutions for the issues identified in the report.
 
-   ![](images/10.png)
+   ![](images/new/9.png)
 
 In this task, you have successfully analyzed the existing Java application using GitHub Copilot App Modernization to identify framework versions, code issues, migration blockers, and readiness for modernization and cloud migration.   
 
-### Task 2: Upgrade Runtime and Frameworks
+### Task 2: Upgrade Runtime and Frameworks (Optional)
 
 In this task, you will use predefined Copilot tasks to automatically upgrade the project’s Java runtime version and frameworks such as Spring/Spring Boot. Copilot will analyze the application, apply necessary version updates, recommend fixes, and commit changes in a new branch.
+
+   >**Note** : This lab uses **Java 25**, which is already up to date. In real-world scenarios, applications may run on older Java versions (e.g., Java 8/11), and upgrading to the latest version is recommended for better security, performance, and compatibility.
 
 1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
 
