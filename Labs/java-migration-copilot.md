@@ -87,6 +87,10 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/30.png)
 
+   > **Note:** If you encounter any errors in the terminal, repeat steps 11 and 12.
+
+    ![](images/new/c3.png)
+
 1. In the Edge browser, open a new tab and enter **[http://localhost:8080](http://localhost:8080)**. You will be navigated to the **AWS S3 Asset Manager** web page.
 
    ![](images/31.png)
