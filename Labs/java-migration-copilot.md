@@ -42,14 +42,22 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/gc29.png)
    
-1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command and **Restart**
+1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command.
 
    ```
    wsl --update
    ```
 
-   ![](images/gc21.png)
+   ![](images/new/b7.png)
    
+1. From the system tray, click the **arrow icon (1)**, right-click **Docker Desktop (2)**, and select **Quit Docker Desktop (3)** to stop the service.
+
+   ![](images/new/b8.png)
+
+1. Click **Start (1)** at the bottom of the screen, search for **Docker Desktop (2)**, and open the **Docker Desktop (3)** again.
+
+   ![](images/11.png)
+
 2. On the **LabVM**, click **Start** at the bottom of the screen and select **File Explorer** from the menu.
 
    ![](images/24.png)
@@ -198,9 +206,7 @@ In this task, you have successfully upgraded the Java runtime and Spring/Spring 
 
 In this task, you will migrate the application's database layer from the local PostgreSQL instance to Azure Database for PostgreSQL Flexible Server using a predefined migration task. Copilot will generate a migration plan, update configuration files, provision Azure resources, and apply the required code changes.
 
-1. For this workshop, Click the **Run Task (3)** in the Assessment Report, on the right of the row `Data Migration (1)` - `Migrate to Azure Database for PostgreSQL (Spring) (2)`.
-
-   ![Confirm Solution](images/34.png)
+1. For this workshop, click the **Run Task** in the Assessment Report, on the right of the row **Secure Azure Database for PostgreSQL with Managed Identity**.
 
    ![Confirm Solution](images/new/a1.png)
 
@@ -218,13 +224,13 @@ In this task, you will migrate the application's database layer from the local P
 
    ![Confirm Solution](images/new/a3.png)
 
-1. After the plan is generated, Copilot Chat will stop with two generated files: **plan.md** and **progress.md**. If prompted, enter "Continue" or "Proceed" in the chat to confirm and execute the plan.
+1. After the plan is generated, Copilot Chat will stop with two generated files: **plan.md** and **progress.md**. 
+
+1. If prompted, enter "Continue" or "Proceed" in the chat to confirm and execute the plan.
 
    ![Confirm Solution](images/35.png)
 
 1. Review the proposed code changes and click **Keep** to apply them.
-
-   ![Confirm Solution](images/36.png)
 
    ![Confirm Solution](images/new/a4.png)
 
@@ -319,9 +325,9 @@ In this task, you will containerize the web and worker modules of the applicatio
 
    > **Note:** If you are prompted to select **az login**, follow the steps below:
 
-   1. Select **Work or school account** from the prompt and click **Continue**.
+   1. Select **Work or school account (1)** from the prompt and click **Continue (2)**.
 
-      ![](images/ex1img3.png)
+      ![](images/new/b9.png)
 
    2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
 
@@ -379,6 +385,39 @@ In this task, you will deploy the fully modernized and containerized application
 
    ![Deployment progress](images/image.png)
 
+   > **Note:** If you are prompted to select **az login**, follow the steps below:
+
+   1. Select **Work or school account (1)** from the prompt and click **Continue (2)**.
+
+      ![](images/new/b9.png)
+
+   2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
+
+      - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   3. Enter the password:
+
+      - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+   4. When prompted, select **No, sign in to this app only** and continue.
+
+      ![](images/new/b5.png)
+
+   5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
+      Enter **1** and press **Enter**.
+
+      ![](images/new/b6.png)
+
+   > **Note:** If the **az login** prompt does **not appear in the browser**:
+   >
+   > 1. Open a **terminal in VS Code**.
+   > 2. Ensure the terminal is opened under the **asset-manager** folder.
+   > 3. Run the following command and complete the sign-in process:
+   >
+   > ```
+   > az login --use-device-code
+   > ```
+
 1. Click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
 
 1. View the architecture diagram, resource configurations, and execution steps in the plan. Click **Keep** to save the plan and type in **Execute the plan** to start the deployment.
@@ -417,13 +456,13 @@ In this task, you will deploy the fully modernized and containerized application
 
 1. To access the web application, Navigate to the **AKS resource** in the Azure portal.
 
-1. Select **Services and Ingresses**.
+   ![Deployment progress](images/new/c1.png)
 
-   ![Deployment progress](images/gc30.png)
-   
-1. Copy the **IP address** of the service.
+1. From the left navigation pane, expand **Kubernetes resources (1)**, click on **Services and Ingresses (2)** and click the **IP address** of the service.
 
-1. Paste the IP address into your browser to access the web application.
+   ![Deployment progress](images/new/c2.png)
+
+1. You will be redirected to a new tab where your web application is displayed.
 
    ![Deployment progress](images/gc31.png)
    
