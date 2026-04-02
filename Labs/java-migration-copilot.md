@@ -42,21 +42,29 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/gc29.png)
    
-1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command.
-
-   ```
-   wsl --update
-   ```
+1. If an error indicates that **WSL needs updating**, follow the steps below:
 
    ![](images/new/b7.png)
    
-1. From the system tray, click the **arrow icon (1)**, right-click **Docker Desktop (2)**, and select **Quit Docker Desktop (3)** to stop the service.
+   - From Windows Search, type **PowerShell (1)** and select **Windows PowerShell (2)**.
 
-   ![](images/new/b8.png)
+      ![](images/new/c4.png)
 
-1. Click **Start (1)** at the bottom of the screen, search for **Docker Desktop (2)**, and open the **Docker Desktop (3)** again.
+   - Run the following command.
 
-   ![](images/11.png)
+      ```
+      wsl --update
+      ```
+
+      ![](images/new/c5.png)
+
+   - From the system tray, click the **arrow icon (1)**, right-click **Docker Desktop (2)**, and select **Quit Docker Desktop (3)** to stop the service.
+
+      ![](images/new/b8.png)
+
+   - Click **Start (1)** at the bottom of the screen, search for **Docker Desktop (2)**, and open the **Docker Desktop (3)** again.
+
+      ![](images/11.png)
 
 2. On the **LabVM**, click **Start** at the bottom of the screen and select **File Explorer** from the menu.
 
@@ -194,13 +202,13 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    >**Note** : This lab uses **Java 25**, which is already up to date. In real-world scenarios, applications may run on older Java versions (e.g., Java 8/11), and upgrading to the latest version is recommended for better security, performance, and compatibility.
 
-1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
+1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Legacy Java Version**.
 
-    ![Java Upgrade](images/java-upgrade.png)
+    ![Java Upgrade](images/new/c7.png)
 
 1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
 
-   ![](images/9.png)
+   ![](images/new/c8.png)
 
    >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
    
@@ -302,6 +310,10 @@ In this task, you will create a custom Copilot task to expose health endpoints u
 
    ![](images/new/b3.png)
    
+   >**Note** : If you see **Run Skill** instead, click **Run Skill** to trigger it.
+
+   ![](images/new/c6.png)
+
 1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. Edit and add the following sentence to the prompt.
 
    ```
