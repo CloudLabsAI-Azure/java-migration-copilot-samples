@@ -4,7 +4,9 @@
 
 ## Overview
 
-In this lab, you will use the GitHub Copilot App Modernization extension to evaluate, modernize, and migrate a Java application. You will begin by assessing the application's current state, then upgrade its runtime and frameworks, migrate its components to Azure services, containerize it, and finally deploy the modernized application to Azure. This end-to-end workflow demonstrates how Copilot can accelerate application modernization and cloud migration.
+In this lab, you will work on a scenario where **ZAVA Ltd**. is modernizing its legacy Java application to improve scalability and cloud readiness. The application currently runs on outdated frameworks, making it difficult to manage and scale.
+
+Using the GitHub Copilot App Modernization extension, you will assess the application, upgrade its runtime and frameworks, migrate components to Azure services, containerize it, and deploy it to a cloud-native environment. This demonstrates an end-to-end modernization workflow.
 
 ## Lab Objectives
 
@@ -208,13 +210,15 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
 1. After clicking the **Run Task** button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click **Allow** for any requests from the agent.
 
+   >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
+
    ![](images/new/c8.png)
 
    >**Note** : Do not select the **Fix CVE** or **Generate Unit Tests** options during this step, as they are not required for the current lab objectives.
 
    ![](images/new/c9.png)
 
-   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
 In this task, you have successfully upgraded the Java runtime and Spring/Spring Boot frameworks using predefined Copilot tasks to ensure the application is secure, modern, and cloud-ready.   
 
@@ -244,6 +248,8 @@ In this task, you will migrate the application's database layer from the local P
 
 1. If prompted, enter "Continue" or "Proceed" in the chat to confirm and execute the plan.
 
+   >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
+
    ![Confirm Solution](images/35.png)
 
 1. Review the proposed code changes and click **Keep** to apply them.
@@ -252,7 +258,7 @@ In this task, you will migrate the application's database layer from the local P
 
    >**Note:** When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning/**Todos** or deployment scripts are running.
 
-   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
 In this task, you have migrated the application’s database from a local PostgreSQL instance to Azure Database for PostgreSQL Flexible Server by generating and executing an automated migration plan.
 
@@ -264,11 +270,13 @@ In this task, you will replace the application's dependency on AWS S3 with Azure
  
    ![](images/23.png)
 
-1. When prompted, click **Continue**/**Allow/Enable more AI features** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning or deployment scripts are running.
+1. When prompted, click **Continue**/**Allow/Enable more AI features** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment.
+
+   >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
 
 1. The following steps are the same as the above PostgreSQL server migration.
 
-   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
 In this task, you have replaced AWS S3 with Azure Blob Storage by updating storage configurations, provisioning cloud resources, and applying the required application code changes.
 
@@ -280,13 +288,15 @@ In this task, you will migrate the application's messaging component from Rabbit
 
    ![](images/21.png)
    
-1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning or deployment scripts are running.
+1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. 
+
+   >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
 
 1. The following steps are the same as the above PostgreSQL server migration.
 
    ![](images/22.png)
 
-   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
 In this task, you have migrated the messaging layer from RabbitMQ to Azure Service Bus by refactoring application messaging, updating configurations, and provisioning Azure messaging resources.   
    
@@ -327,7 +337,7 @@ In this task, you will create a custom Copilot task to expose health endpoints u
    
 1. Review the proposed code changes and click **Keep** to apply them.
 
-   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
    
 In this task, you have created and executed a custom Copilot task to enable Spring Boot Actuator health endpoints for application monitoring and Azure readiness probes.
 
@@ -341,7 +351,7 @@ In this task, you will containerize the web and worker modules of the applicatio
 
 1. When prompted, click **Continue** or **Allow** in chat notifications, or type **y** / **yes** in the terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and complete the deployment.  
 
-   **Do not interrupt** while the provisioning or deployment scripts are running.
+   >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
 
 2. A predefined prompt will be populated in the **Copilot Chat panel** with **Agent Mode** enabled.  
    Copilot Agent will analyze the workspace and create a file named **containerization-plan.copilotmd** containing the containerization plan.
@@ -352,7 +362,7 @@ In this task, you will containerize the web and worker modules of the applicatio
     
 1. Copilot Agent will help generate Dockerfile, build Docker images and fix build errors if there are any. Click **Keep** to apply the generated code.
 
-   >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 20–30 minutes.
 
 1. Navigate to the **worker (1)** folder in VS Code and verify that the **Dockerfile (2)** is created.
 
@@ -409,9 +419,11 @@ In this task, you will deploy the fully modernized and containerized application
 
 1. View the architecture diagram, resource configurations, and execution steps in the plan. Click **Keep** to save the plan and type in **Execute the plan** to start the deployment.
 
-1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. You can also check the deployment status in **progress.copilotmd**. **DO NOT interrupt** when provisioning or deployment scripts are running.
+1. When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. You can also check the deployment status in **progress.copilotmd**. 
 
-   >**Note** : Copilot may take approximately 30-45 minutes to complete the task.
+   >**Note** : **Do not interrupt** while the provisioning or deployment scripts are running.
+
+   >**Note** : Please wait while Copilot completes the task, which may take approximately 30–45 minutes.
 
 1. Once deployment completed you can view the deployment status as below: 
 
