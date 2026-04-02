@@ -327,39 +327,6 @@ In this task, you will containerize the web and worker modules of the applicatio
 
    **Do not interrupt** while the provisioning or deployment scripts are running.
 
-   > **Note:** If you are prompted to select **az login**, follow the steps below:
-
-   1. Select **Work or school account (1)** from the prompt and click **Continue (2)**.
-
-      ![](images/new/b9.png)
-
-   2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
-
-      - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-   3. Enter the password:
-
-      - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-   4. When prompted, select **No, sign in to this app only** and continue.
-
-      ![](images/new/b5.png)
-
-   5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
-      Enter **1** and press **Enter**.
-
-      ![](images/new/b6.png)
-
-   > **Note:** If the **az login** prompt does **not appear in the browser**:
-   >
-   > 1. Open a **terminal in VS Code**.
-   > 2. Ensure the terminal is opened under the **asset-manager** folder.
-   > 3. Run the following command and complete the sign-in process:
-   >
-   > ```
-   > az login --use-device-code
-   > ```
-
 2. A predefined prompt will be populated in the **Copilot Chat panel** with **Agent Mode** enabled.  
    Copilot Agent will analyze the workspace and create a file named **containerization-plan.copilotmd** containing the containerization plan.
 
