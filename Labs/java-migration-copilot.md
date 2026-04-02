@@ -210,6 +210,10 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    ![](images/new/c8.png)
 
+   >**Note** : Do not select the **Fix CVE** or **Generate Unit Tests** options during this step, as they are not required for the current lab objectives.
+
+   ![](images/new/c9.png)
+
    >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
    
 In this task, you have successfully upgraded the Java runtime and Spring/Spring Boot frameworks using predefined Copilot tasks to ensure the application is secure, modern, and cloud-ready.   
