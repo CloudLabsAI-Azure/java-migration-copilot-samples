@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will work on a scenario where **ZAVA Ltd**. is modernizing its legacy Java application to improve scalability and cloud readiness. The application currently runs on outdated frameworks, making it difficult to manage and scale.
+In this lab, you will work on a scenario where **Contoso Ltd**. is modernizing its legacy Java application to improve scalability and cloud readiness. The application currently runs on outdated frameworks, making it difficult to manage and scale.
 
 Using the GitHub Copilot App Modernization extension, you will assess the application, upgrade its runtime and frameworks, migrate components to Azure services, containerize it, and deploy it to a cloud-native environment. This demonstrates an end-to-end modernization workflow.
 
