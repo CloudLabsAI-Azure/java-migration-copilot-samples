@@ -429,7 +429,7 @@ In this task, you will deploy the fully modernized and containerized application
 
    ![Deployment progress](images/new/c1.png)
 
-1. From the left navigation pane, expand **Kubernetes resources (1)**, click on **Services and Ingresses (2)** and click the **IP address** of the service.
+1. From the left navigation pane, expand **Kubernetes resources (1)**, click on **Services and Ingresses (2)** and click the **IP address (3)** of the service.
 
    ![Deployment progress](images/new/c2.png)
 
