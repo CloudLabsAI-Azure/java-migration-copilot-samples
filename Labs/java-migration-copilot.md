@@ -42,23 +42,31 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/gc29.png)
    
-1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command and **Restart**
+1. If an error occurs indicating that WSL needs updating, open **Windows PowerShell** as Administrator and run the following command.
 
    ```
    wsl --update
    ```
 
-   ![](images/gc21.png)
+   ![](images/new/b7.png)
    
+1. From the system tray, click the **arrow icon (1)**, right-click **Docker Desktop (2)**, and select **Quit Docker Desktop (3)** to stop the service.
+
+   ![](images/new/b8.png)
+
+1. Click **Start (1)** at the bottom of the screen, search for **Docker Desktop (2)**, and open the **Docker Desktop (3)** again.
+
+   ![](images/11.png)
+
 2. On the **LabVM**, click **Start** at the bottom of the screen and select **File Explorer** from the menu.
 
    ![](images/24.png)
 
-1. In **File Explorer**, navigate to: **C:\LabFiles\java-migration-copilot-samples\asset-manager**
+1. In **File Explorer**, navigate to: `C:\LabFiles\java-migration-copilot-samples\asset-manager`
 
    ![](images/25.png)
 
-1. In the File Explorer address bar, replace the path **C:\LabFiles\java-migration-copilot-samples\asset-manager** with **cmd**, then press **Enter**.
+1. In the File Explorer address bar, replace the path `C:\LabFiles\java-migration-copilot-samples\asset-manager` with **cmd**, then press **Enter**.
 
    ![](images/26.png)
 
@@ -78,6 +86,10 @@ In this task, you will run and explore the sample Java application and use the G
    > **Note:** If two Windows prompts appear, minimize them and let them run in the background. **Do NOT interrupt** the process.
 
    ![](images/30.png)
+
+   > **Note:** If you encounter any errors in the terminal, repeat steps 11 and 12.
+
+    ![](images/new/c3.png)
 
 1. In the Edge browser, open a new tab and enter **[http://localhost:8080](http://localhost:8080)**. You will be navigated to the **AWS S3 Asset Manager** web page.
 
@@ -104,7 +116,7 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/7.png)
 
-1. From File Explorer, navigate to **C:\LabFiles\java-migration-copilot-samples (1)**, select the **asset-manager (2)** folder from the Quick Access section, and click on **Select Folder (3)**.
+1. From File Explorer, navigate to `C:\LabFiles\java-migration-copilot-samples` **(1)**, select the **asset-manager (2)** folder from the Quick Access section, and click on **Select Folder (3)**.
 
    ![](images/4.png)
 
@@ -116,13 +128,17 @@ In this task, you will run and explore the sample Java application and use the G
 
     ![](images/gc25.png)
     
-1. Select **Enable more AI Features**.
+1. Select **Use AI Features**.
 
-1. In the **Enable more features** tab, click **Sign in/Continue with GitHub**.
+    ![](images/new/1.png)
+
+1. In the **Sign in to use AI Features** tab, click **Continue with GitHub**.
+
+    ![](images/new/2.png)
 
 1. On the **Sign in to GitHub** tab, you will see the login screen. In that screen, enter the following **email: odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs**. Then click on **Sign in with your identity provider** **(2)**. 
    
-   ![](images/githublogin.png)
+   ![](images/new/3.png)
           
 1. Next, On the **Single sign-on to CLoudLabs Organizations** select **Continue**.
 
@@ -136,33 +152,47 @@ In this task, you will run and explore the sample Java application and use the G
 
    ![](images/3.png)
 
-1. Click on the **Extensions** (1) button on the left-hand banner, search for **GitHub Copilot modernization** (2) and **Install** (3) the extension.
+1. If prompted, click **Open** to allow vscode.dev to launch the project in **Visual Studio Code**.
+
+   ![](images/new/4.png)
+
+1. Click on the **Extensions (1)** button on the left-hand banner, search for **GitHub Copilot modernization (2)** and **Install (3)** the extension.
 
     ![](images/gc23.png)
 
-1. In **GitHub Copilot Chat**, locate the **model selector** below the prompt text box. The current model name appears at the bottom of the chat input area.
+1. In **GitHub Copilot Chat**, click the **model selector** located below the prompt text box.
 
-   ![](images/gc26.png)
+   ![](images/new/5.png)
 
-1. Click on the **current model name** to open the list of available AI models.
+1. Select the **Claude Sonnet 4.6** model from the available options to continue using it for your prompts.
 
-1. Select the **Claude Sonnet 4.5** model from the available options to continue using it for your prompts.
+   ![](images/new/6.png)
 
 1. Open the **GitHub Copilot modernization (1)** extension from the left panel. In the **QUICKSTART** view, click the **Start Assessment (2)** button to start the app assessment.
 
-   ![Trigger Assessment](images/gc24.png)
+   ![](images/gc24.png)
+
+1. On the Assessment Reports screen, select **Recommended Assessment** to proceed with the default evaluation setup.
+
+   ![](images/new/7.png)
+
+1. In the Recommended Assessment dialog, select the required domains and click **OK** to continue.
+
+   ![](images/new/8.png)
 
 1. Please wait until the assessment is completed and the report is generated.
    
 1. Review the **Assessment Report**. Select the **Issues** tab to view the proposed solutions for the issues identified in the report.
 
-   ![](images/10.png)
+   ![](images/new/9.png)
 
 In this task, you have successfully analyzed the existing Java application using GitHub Copilot App Modernization to identify framework versions, code issues, migration blockers, and readiness for modernization and cloud migration.   
 
-### Task 2: Upgrade Runtime and Frameworks
+### Task 2: Upgrade Runtime and Frameworks (Optional)
 
 In this task, you will use predefined Copilot tasks to automatically upgrade the project’s Java runtime version and frameworks such as Spring/Spring Boot. Copilot will analyze the application, apply necessary version updates, recommend fixes, and commit changes in a new branch.
+
+   >**Note** : This lab uses **Java 25**, which is already up to date. In real-world scenarios, applications may run on older Java versions (e.g., Java 8/11), and upgrading to the latest version is recommended for better security, performance, and compatibility.
 
 1. In the **Java Upgrade** table at the bottom of the **Issues** tab, click the **Run Task** button of the first entry **Java Version Upgrade**.
 
@@ -180,23 +210,33 @@ In this task, you have successfully upgraded the Java runtime and Spring/Spring 
 
 In this task, you will migrate the application's database layer from the local PostgreSQL instance to Azure Database for PostgreSQL Flexible Server using a predefined migration task. Copilot will generate a migration plan, update configuration files, provision Azure resources, and apply the required code changes.
 
-1. For this workshop, Click the **Run Task (3)** in the Assessment Report, on the right of the row `Data Migration (1)` - `Migrate to Azure Database for PostgreSQL (Spring) (2)`.
+1. For this workshop, click the **Run Task** in the Assessment Report, on the right of the row **Secure Azure Database for PostgreSQL with Managed Identity**.
 
-   ![Confirm Solution](images/34.png)
+   ![Confirm Solution](images/new/a1.png)
 
 1. After clicking the **Run Task** button in the Assessment Report, the Copilot Chat panel will open with Agent Mode.
 
 1. The Copilot Agent will first analyze the project and generate a migration plan.
 
-1. After the plan is generated, Copilot Chat will stop with two generated files: **plan.md** and **progress.md**. If prompted, enter "Continue" or "Proceed" in the chat to confirm and execute the plan.
+1. If prompted, click **Allow** to grant the required permissions.
+
+1. In the Visual Studio Code prompt, click **Allow** to sign in with GitHub.
+
+   ![Confirm Solution](images/new/a2.png)
+
+1. In the account selection prompt, choose **odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs** to proceed with authentication.
+
+   ![Confirm Solution](images/new/a3.png)
+
+1. After the plan is generated, Copilot Chat will stop with two generated files: **plan.md** and **progress.md**. 
+
+1. If prompted, enter "Continue" or "Proceed" in the chat to confirm and execute the plan.
 
    ![Confirm Solution](images/35.png)
 
-1. When the code is migrated, the extension will prepare the **CVE Validation and Fixing** process. Click **Allow** to proceed.
-
 1. Review the proposed code changes and click **Keep** to apply them.
 
-   ![Confirm Solution](images/36.png)
+   ![Confirm Solution](images/new/a4.png)
 
    >**Note:** When prompted, click **Continue**/**Allow** in chat notifications or type **y**/**yes** in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. **DO NOT interrupt** when provisioning/**Todos** or deployment scripts are running.
 
@@ -248,19 +288,19 @@ In this task, you will create a custom Copilot task to expose health endpoints u
 
 1. A **Create a Skill** form opens with the following fields. Fill them in as shown below:
 
-     - **Skill Name:** `expose-health-endpoint`
-     - **Skill Description:** This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness.        
-     - **Skill Content:**  You are a Spring Boot developer assistant. Follow the **Spring Boot Actuator documentation** to add basic health endpoints required for Azure Container Apps deployment.
+     - **Skill Name:** `expose-health-endpoint` **(1)**
+     - **Skill Description:** This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness. **(2)** 
+     - **Skill Content:**  You are a Spring Boot developer assistant. Follow the **Spring Boot Actuator documentation** to add basic health endpoints required for Azure Container Apps deployment. **(3)**
 
-   ![](images/gc32.png)
+   ![](images/new/b1.png)
                      
 1. Click **Save** to create the task.
 
-   ![](images/gc33.png)
+   ![](images/new/b2.png)
 
-1. Click the **Run** button to trigger the custom task.
+1. Click the **Run Task** button to trigger the custom task.
 
-   ![](images/gc34.png)
+   ![](images/new/b3.png)
    
 1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. Edit and add the following sentence to the prompt.
 
@@ -279,42 +319,13 @@ In this task, you have created and executed a custom Copilot task to enable Spri
 
 In this task, you will containerize the web and worker modules of the application using Containerization Tasks. Copilot will generate Dockerfiles, build container images, resolve build issues, and prepare the application for cloud deployment inside containers.
 
-1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Java** -> **Containerization Tasks** -> **Containerize Application**.
+1. Open the sidebar of `GITHUB COPILOT MODERNIZATION`. In **Tasks** view, click the **Run Task** button of **Common Tasks** -> **Containerize Tasks** -> **Containerize Application**.
   
     ![Run Containerize Application task](images/containerization-run-task.png)
 
 1. When prompted, click **Continue** or **Allow** in chat notifications, or type **y** / **yes** in the terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and complete the deployment.  
 
    **Do not interrupt** while the provisioning or deployment scripts are running.
-
-   > **Note:** If you are prompted to select **az login**, follow the steps below:
-
-   1. Select **Work or school account** from the prompt and click **Continue**.
-
-      ![](images/ex1img3.png)
-
-   2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
-
-      - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
-
-   3. Enter the password:
-
-      - **Password:** <inject key="AzureAdUserPassword"></inject>
-
-   4. When prompted, select **No, sign in to this app only** and continue.
-
-   5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
-      Enter **1** and press **Enter**.
-
-   > **Note:** If the **az login** prompt does **not appear in the browser**:
-   >
-   > 1. Open a **terminal in VS Code**.
-   > 2. Ensure the terminal is opened under the **asset-manager** folder.
-   > 3. Run the following command and complete the sign-in process:
-   >
-   > ```
-   > az login --use-device-code
-   > ```
 
 2. A predefined prompt will be populated in the **Copilot Chat panel** with **Agent Mode** enabled.  
    Copilot Agent will analyze the workspace and create a file named **containerization-plan.copilotmd** containing the containerization plan.
@@ -327,7 +338,11 @@ In this task, you will containerize the web and worker modules of the applicatio
 
    >**Note** : Copilot may take approximately 20–30 minutes to complete the task.
 
-in this task, you have containerized the application components by generating Dockerfiles, building container images, and fixing build issues using Copilot’s containerization tasks.
+1. Navigate to the **worker (1)** folder in VS Code and verify that the **Dockerfile (2)** is created.
+
+    ![](images/new/b4.png)
+
+In this task, the application was containerized using the GitHub Copilot App Modernization Containerization Task, where Copilot generated the containerization-plan.copilotmd, created Dockerfiles for the application modules, and successfully built Docker images with all changes accepted via “Keep”. These Docker artifacts (Dockerfiles and images) are then used as deployment inputs in Task 8, where the application is provisioned and deployed to Azure Kubernetes Service.
 
 ### Task 8: Deploy to Azure
 
@@ -340,6 +355,39 @@ In this task, you will deploy the fully modernized and containerized application
 1. Wait for the predefined deployment prompt to appear in the Copilot Chat panel with Agent Mode enabled. Click inside the prompt text in Copilot Chat. **Edit** the last sentence of the prompt to **Hosting service: AKS**.
 
    ![Deployment progress](images/image.png)
+
+   > **Note:** If you are prompted to select **az login**, follow the steps below:
+
+   1. Select **Work or school account (1)** from the prompt and click **Continue (2)**.
+
+      ![](images/new/b9.png)
+
+   2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
+
+      - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   3. Enter the password:
+
+      - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+   4. When prompted, select **No, sign in to this app only** and continue.
+
+      ![](images/new/b5.png)
+
+   5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
+      Enter **1** and press **Enter**.
+
+      ![](images/new/b6.png)
+
+   > **Note:** If the **az login** prompt does **not appear in the browser**:
+   >
+   > 1. Open a **terminal in VS Code**.
+   > 2. Ensure the terminal is opened under the **asset-manager** folder.
+   > 3. Run the following command and complete the sign-in process:
+   >
+   > ```
+   > az login --use-device-code
+   > ```
 
 1. Click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
 
@@ -379,13 +427,13 @@ In this task, you will deploy the fully modernized and containerized application
 
 1. To access the web application, Navigate to the **AKS resource** in the Azure portal.
 
-1. Select **Services and Ingresses**.
+   ![Deployment progress](images/new/c1.png)
 
-   ![Deployment progress](images/gc30.png)
-   
-1. Copy the **IP address** of the service.
+1. From the left navigation pane, expand **Kubernetes resources (1)**, click on **Services and Ingresses (2)** and click the **IP address (3)** of the service.
 
-1. Paste the IP address into your browser to access the web application.
+   ![Deployment progress](images/new/c2.png)
+
+1. You will be redirected to a new tab where your web application is displayed.
 
    ![Deployment progress](images/gc31.png)
    
