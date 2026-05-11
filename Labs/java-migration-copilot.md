@@ -214,6 +214,16 @@ In this task, you will use predefined Copilot tasks to automatically upgrade the
 
    ![](images/new/c8.png)
 
+   1. If prompted, click **Allow** to grant the required permissions.
+
+1. In the Visual Studio Code prompt, click **Allow** to sign in with GitHub.
+
+   ![Confirm Solution](images/new/a2.png)
+
+1. In the account selection prompt, choose **odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs** to proceed with authentication.
+
+   ![Confirm Solution](images/new/a3.png)
+
    >**Note** : Do not select the **Fix CVE** or **Generate Unit Tests** options during this step, as they are not required for the current lab objectives.
 
    ![](images/new/c9.png)
@@ -233,16 +243,6 @@ In this task, you will migrate the application's database layer from the local P
 1. After clicking the **Run Task** button in the Assessment Report, the Copilot Chat panel will open with Agent Mode.
 
 1. The Copilot Agent will first analyze the project and generate a migration plan.
-
-1. If prompted, click **Allow** to grant the required permissions.
-
-1. In the Visual Studio Code prompt, click **Allow** to sign in with GitHub.
-
-   ![Confirm Solution](images/new/a2.png)
-
-1. In the account selection prompt, choose **odl-user-<inject key="DeploymentID" enableCopy="false"/>_clabs** to proceed with authentication.
-
-   ![Confirm Solution](images/new/a3.png)
 
 1. After the plan is generated, Copilot Chat will stop with two generated files: **plan.md** and **progress.md**. 
 
