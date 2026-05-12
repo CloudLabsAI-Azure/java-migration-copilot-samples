@@ -384,36 +384,31 @@ In this task, you will deploy the fully modernized and containerized application
 
    > **Note:** If you are prompted to select **az login**, follow the steps below:
 
-   1. Select **Work or school account (1)** from the prompt and click **Continue (2)**.
+1. Select **Work or school account (1)** from the prompt and click **Continue (2)**.
 
       ![](images/new/b9.png)
 
-   2. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
+1. You will see the **Sign into Microsoft Azure** page. Enter the following credentials:
 
       - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-   3. Enter the password:
+1. Enter the password:
 
       - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-   4. When prompted, select **No, sign in to this app only** and continue.
+1. When prompted, select **No, sign in to this app only** and continue.
 
       ![](images/new/b5.png)
 
-   5. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list.  
-      Enter **1** and press **Enter**.
+1. Return to the **Visual Studio Code** terminal. You will be prompted to select a subscription from a list. Enter **1** and press **Enter**.
 
       ![](images/new/b6.png)
 
-   > **Note:** If the **az login** prompt does **not appear in the browser**:
-   >
-   > 1. Open a **terminal in VS Code**.
-   > 2. Ensure the terminal is opened under the **asset-manager** folder.
-   > 3. Run the following command and complete the sign-in process:
-   >
-   > ```
-   > az login --use-device-code
-   > ```
+      > **Note:** If the **az login** prompt does **not appear in the browser**:
+      >
+      > 1. Open a **terminal in VS Code**.
+      > 2. Ensure the terminal is opened under the **asset-manager** folder.
+      > 3. Run the `az login --use-device-code` command and complete the sign-in process:
 
 1. Click **Continue**/**Allow** if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in **plan.copilotmd** with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
 
